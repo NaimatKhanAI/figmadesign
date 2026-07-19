@@ -111,7 +111,7 @@
 function fitToViewport() {
   var screen = document.querySelector('.screen');
   var w = 2048.00, h = 2732.00;
-  var scale = Math.min(window.innerWidth / w, window.innerHeight / h) * 0.98;
+  var scale = Math.min(window.innerWidth / w, window.innerHeight / h);
   screen.style.transform = 'scale(' + scale + ')';
   screen.style.transformOrigin = 'center center';
 }

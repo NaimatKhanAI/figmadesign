@@ -24,8 +24,8 @@
 </div>
 </div>
 <div style="position: absolute; left: 0.00px; top: 742.00px; width: 2048.00px; height: 1893.00px">
-<div style="position: absolute; left: 0.00px; top: 0.00px; width: 969.00px; height: 991.00px; background-image: url('assets/images/9f37ca24b1ce8e524ca2294456aafbcb9ac9c65d.png'); background-size: cover; background-position: center; background-repeat: no-repeat; border-radius: 0.0px 62.0px 62.0px 0.0px; overflow: hidden"></div>
-<div style="position: absolute; left: 0.00px; top: 1033.00px; width: 969.00px; height: 831.00px; background-image: url('assets/images/a43a437dc4ef14c386999ef53cd708db7e83b6d2.png'); background-size: cover; background-position: center; background-repeat: no-repeat; border-radius: 0.0px 62.0px 62.0px 0.0px; overflow: hidden"></div>
+<div style="position: absolute; left: 0.00px; top: 0.00px; width: 969.00px; height: 991.00px; background-image: url('../assets/images/9f37ca24b1ce8e524ca2294456aafbcb9ac9c65d.png'); background-size: cover; background-position: center; background-repeat: no-repeat; border-radius: 0.0px 62.0px 62.0px 0.0px; overflow: hidden"></div>
+<div style="position: absolute; left: 0.00px; top: 1033.00px; width: 969.00px; height: 831.00px; background-image: url('../assets/images/a43a437dc4ef14c386999ef53cd708db7e83b6d2.png'); background-size: cover; background-position: center; background-repeat: no-repeat; border-radius: 0.0px 62.0px 62.0px 0.0px; overflow: hidden"></div>
 <div style="position: absolute; left: 1049.00px; top: -129.00px; width: 1042.00px; height: 1120.00px; background-color: rgba(0,0,0,0.200); border-radius: 62.0px 0.0px 0.0px 62.0px; overflow: hidden">
 <div style="position: absolute; left: 634.00px; top: 319.00px; width: 220.00px; height: 221.00px; border-radius: 60.0px">
 <div style="position: absolute; left: 0.00px; top: 0.00px; width: 220.00px; height: 221.00px; border-radius: 30.0px">
@@ -38,7 +38,7 @@
 </div>
 </div>
 </div>
-<div style="position: absolute; left: 1049.00px; top: 1033.00px; width: 1026.00px; height: 860.00px; background-image: url('assets/images/883ba2723024bbe08adaaed62ae093070559b106.png'); background-size: cover; background-position: center; background-repeat: no-repeat; border-radius: 62.0px 0.0px 0.0px 62.0px; overflow: hidden"></div>
+<div style="position: absolute; left: 1049.00px; top: 1033.00px; width: 1026.00px; height: 860.00px; background-image: url('../assets/images/883ba2723024bbe08adaaed62ae093070559b106.png'); background-size: cover; background-position: center; background-repeat: no-repeat; border-radius: 62.0px 0.0px 0.0px 62.0px; overflow: hidden"></div>
 <div style="position: absolute; left: 893.00px; top: 1550.00px; width: 1935.00px; height: 380.00px">
 <div style="position: absolute; left: 0.00px; top: 0.00px; width: 1168.00px; height: 380.00px; background-color: rgba(36,36,43,1.000); border-radius: 70.0px">
 <div style="position: absolute; left: 0.00px; top: 0.00px; width: 1168.00px; height: 380.00px; background-color: rgba(255,255,255,0.002); box-shadow: 0.0px 25.0px 50.0px -12.0px rgba(0,0,0,0.250); border-radius: 32.0px"></div>
@@ -80,7 +80,7 @@
 function fitToViewport() {
   var screen = document.querySelector('.screen');
   var w = 2048.00, h = 2732.00;
-  var scale = Math.min(window.innerWidth / w, window.innerHeight / h) * 0.98;
+  var scale = Math.min(window.innerWidth / w, window.innerHeight / h);
   screen.style.transform = 'scale(' + scale + ')';
   screen.style.transformOrigin = 'center center';
 }

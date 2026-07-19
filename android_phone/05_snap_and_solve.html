@@ -96,7 +96,7 @@
 <div class="ff" data-origsize="40.06" data-lhratio="1.5556" data-valign="CENTER" style="position: absolute; left: 0.00px; top: 0.00px; width: 264.20px; height: 63.00px; font-family: 'Inter', sans-serif; font-weight: 500; font-size: 40.06px; line-height: 62.32px; letter-spacing: 0.00px; color: rgba(255,255,255,1.000); text-align: left; display: block; white-space: pre-wrap; text-transform: none">1. 1 + 2 = 3</div>
 </div>
 <div style="position: absolute; left: 0.00px; top: 89.71px; width: 264.20px; height: 63.00px">
-<div class="ff" data-origsize="40.06" data-lhratio="1.5556" data-valign="CENTER" style="position: absolute; left: 0.00px; top: 0.00px; width: 264.20px; height: 63.00px; font-family: 'Inter', sans-serif; font-weight: 500; font-size: 40.06px; line-height: 62.32px; letter-spacing: 0.00px; color: rgba(255,255,255,1.000); text-align: left; display: block; white-space: pre-wrap; text-transform: none">2. 6 ÷ 2 = 3</div>
+<div class="ff" data-origsize="40.06" data-lhratio="1.5556" data-valign="CENTER" style="position: absolute; left: 0.00px; top: 0.00px; width: 264.20px; height: 63.00px; font-family: 'Inter', sans-serif; font-weight: 500; font-size: 40.06px; line-height: 62.32px; letter-spacing: 0.00px; color: rgba(255,255,255,1.000); text-align: left; display: block; white-space: pre-wrap; text-transform: none">2. 6 &divide; 2 = 3</div>
 </div>
 <div style="position: absolute; left: 0.00px; top: 179.41px; width: 264.20px; height: 63.00px">
 <div class="ff" data-origsize="40.06" data-lhratio="1.5556" data-valign="CENTER" style="position: absolute; left: 0.00px; top: 0.00px; width: 264.20px; height: 63.00px; font-family: 'Inter', sans-serif; font-weight: 500; font-size: 40.06px; line-height: 62.32px; letter-spacing: 0.00px; color: rgba(255,255,255,1.000); text-align: left; display: block; white-space: pre-wrap; text-transform: none">3. 3 x 3 = 9</div>
@@ -130,7 +130,7 @@
 function fitToViewport() {
   var screen = document.querySelector('.screen');
   var w = 1080.00, h = 1920.00;
-  var scale = Math.min(window.innerWidth / w, window.innerHeight / h) * 0.98;
+  var scale = Math.min(window.innerWidth / w, window.innerHeight / h);
   screen.style.transform = 'scale(' + scale + ')';
   screen.style.transformOrigin = 'center center';
 }

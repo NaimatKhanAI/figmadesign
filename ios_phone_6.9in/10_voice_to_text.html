@@ -70,7 +70,7 @@
 <div style="position: absolute; left: 62.95px; top: 66.15px; width: 1149.12px; height: 209.12px">
 <div style="position: absolute; left: 0.00px; top: 0.00px; width: 979.47px; height: 209.12px; background-color: rgba(45,45,77,1.000); border-radius: 78.95535278320312px 78.95535278320312px 78.95535278320312px 0.0px">
 <div style="position: absolute; left: 0.00px; top: 0.00px; width: 979.49px; height: 209.33px; background-color: rgba(255,255,255,0.002); box-shadow: 0.0px 13.308150291442871px 19.96222686767578px -13.308150291442871px rgba(0,0,0,0.100), 0.0px 33.27037811279297px 49.90556716918945px -9.98111343383789px rgba(0,0,0,0.100); border-radius: 64.01785278320312px 64.01785278320312px 64.01785278320312px 0.0px"></div>
-<div style="position: absolute; left: 25.61px; top: 27.21px; width: 154.71px; height: 154.71px; background-image: url('assets/images/b221b673ddff5f75bfcab24a721f684b4af78bdf.png'); background-size: cover; background-position: center; background-repeat: no-repeat; border-radius: 87.98760986328125px"></div>
+<div style="position: absolute; left: 25.61px; top: 27.21px; width: 154.71px; height: 154.71px; background-image: url('../assets/images/b221b673ddff5f75bfcab24a721f684b4af78bdf.png'); background-size: cover; background-position: center; background-repeat: no-repeat; border-radius: 87.98760986328125px"></div>
 <div style="position: absolute; left: 180.32px; top: 57.56px; width: 639.92px; height: 94.00px">
 <div class="ff" data-origsize="48.00" data-lhratio="1.9408" data-valign="CENTER" style="position: absolute; left: 39.92px; top: 0.00px; width: 600.00px; height: 94.00px; font-family: 'Inter', sans-serif; font-weight: 400; font-size: 48.00px; line-height: 93.16px; letter-spacing: 0.00px; color: rgba(255,255,255,1.000); text-align: left; display: block; white-space: pre-wrap; text-transform: none">How can I help you?</div>
 </div>
@@ -384,7 +384,7 @@
 function fitToViewport() {
   var screen = document.querySelector('.screen');
   var w = 1320.00, h = 2868.00;
-  var scale = Math.min(window.innerWidth / w, window.innerHeight / h) * 0.98;
+  var scale = Math.min(window.innerWidth / w, window.innerHeight / h);
   screen.style.transform = 'scale(' + scale + ')';
   screen.style.transformOrigin = 'center center';
 }

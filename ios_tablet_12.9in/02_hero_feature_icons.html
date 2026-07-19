@@ -88,7 +88,7 @@
 </div>
 </div>
 <div style="position: absolute; left: 615.00px; top: 2049.00px; width: 809.44px; height: 809.44px">
-<div style="position: absolute; left: -62.00px; top: -39.00px; width: 915.00px; height: 915.00px; background-image: url('assets/images/a08dc3cd5de710af4415d07b4d92117bcedea2ff.png'); background-size: 125.00% 125.00%; background-position: 50.00% 50.00%; background-repeat: no-repeat"></div>
+<div style="position: absolute; left: -62.00px; top: -39.00px; width: 915.00px; height: 915.00px; background-image: url('../assets/images/a08dc3cd5de710af4415d07b4d92117bcedea2ff.png'); background-size: 125.00% 125.00%; background-position: 50.00% 50.00%; background-repeat: no-repeat"></div>
 <div style="position: absolute; left: 29.00px; top: 253.00px; width: 752.60px; height: 152.37px">
 <div class="ff" data-origsize="69.17" data-lhratio="1.4717" data-valign="CENTER" style="position: absolute; left: -8.95px; top: 0.00px; width: 770.49px; height: 102.00px; font-family: 'Inter', sans-serif; font-weight: 900; font-size: 69.17px; line-height: 101.79px; letter-spacing: 0.00px; color: rgba(243,251,254,1.000); text-align: center; display: block; white-space: pre-wrap; text-transform: none">100,000,000+</div>
 <div class="ff" data-origsize="73.10" data-lhratio="0.5802" data-valign="CENTER" style="position: absolute; left: 0.00px; top: 109.37px; width: 752.60px; height: 43.00px; font-family: 'Outfit', sans-serif; font-weight: 700; font-size: 73.10px; line-height: 42.41px; letter-spacing: 6.32px; color: rgba(255,255,255,1.000); text-align: center; display: block; white-space: pre-wrap; text-transform: none">Requests</div>
@@ -112,7 +112,7 @@
 function fitToViewport() {
   var screen = document.querySelector('.screen');
   var w = 2048.00, h = 2732.00;
-  var scale = Math.min(window.innerWidth / w, window.innerHeight / h) * 0.98;
+  var scale = Math.min(window.innerWidth / w, window.innerHeight / h);
   screen.style.transform = 'scale(' + scale + ')';
   screen.style.transformOrigin = 'center center';
 }

@@ -19,7 +19,7 @@
 <div style="position: absolute; left: 742.00px; top: 2188.00px; width: 1000.00px; height: 1000.00px; background-color: rgba(19,40,101,1.000); filter: blur(1000.0px); border-radius: 50%"></div>
 <div style="position: absolute; left: 0.00px; top: -458.04px; width: 1296.21px; height: 1504.09px">
 <div style="position: absolute; left: 79.95px; top: 79.95px; width: 1136.31px; height: 1424.14px; background-color: rgba(255,255,255,0.002); box-shadow: 0.0px 83.28277587890625px 166.5655517578125px -39.975730895996094px rgba(0,0,0,0.250); border-radius: 133.25244140625px; border: 19.99px solid rgba(34,34,34,1.000); overflow: hidden">
-<div style="position: absolute; left: 19.99px; top: 19.99px; width: 1096.33px; height: 1384.16px; background-image: url('assets/images/3f4284a3742f081bb32b6bc1a60d115c0bf659a2.png'); background-size: cover; background-position: center; background-repeat: no-repeat; overflow: hidden"></div>
+<div style="position: absolute; left: 19.99px; top: 19.99px; width: 1096.33px; height: 1384.16px; background-image: url('../assets/images/3f4284a3742f081bb32b6bc1a60d115c0bf659a2.png'); background-size: cover; background-position: center; background-repeat: no-repeat; overflow: hidden"></div>
 <div style="position: absolute; left: 73.29px; top: 73.29px; width: 186.55px; height: 186.55px; background-color: rgba(0,200,150,1.000); border-radius: 53.30097198486328px">
 <div style="position: absolute; left: 0.00px; top: 0.00px; width: 186.55px; height: 186.55px; background-color: rgba(255,255,255,0.002); box-shadow: 0.0px 13.32524299621582px 19.987865447998047px -13.32524299621582px rgba(0,0,0,0.100), 0.0px 33.3131103515625px 49.96966552734375px -9.993932723999023px rgba(0,0,0,0.100); border-radius: 53.30097198486328px"></div>
 <div style="position: absolute; left: 39.98px; top: 39.98px; width: 106.60px; height: 106.60px; overflow: hidden">
@@ -54,7 +54,7 @@
 <div style="position: absolute; left: -2.13px; top: 2072.48px; width: 1334.91px; height: 765.08px">
 <div style="position: absolute; left: 82.33px; top: 0.00px; width: 1072.67px; height: 600.42px; background-color: rgba(255,255,255,0.080); backdrop-filter: blur(41.16655349731445px); border-radius: 42.60869598388672px 66.0434799194336px 42.60869598388672px 19.173912048339844px; border: 3.43px solid rgba(255,255,255,0.100)">
 <div style="position: absolute; left: 85.76px; top: 85.76px; width: 818.81px; height: 428.89px">
-<div style="position: absolute; left: 0.00px; top: 0.00px; width: 141.67px; height: 141.67px; background-image: url('assets/images/b221b673ddff5f75bfcab24a721f684b4af78bdf.png'); background-size: cover; background-position: center; background-repeat: no-repeat; border-radius: 92.67391204833984px"></div>
+<div style="position: absolute; left: 0.00px; top: 0.00px; width: 141.67px; height: 141.67px; background-image: url('../assets/images/b221b673ddff5f75bfcab24a721f684b4af78bdf.png'); background-size: cover; background-position: center; background-repeat: no-repeat; border-radius: 92.67391204833984px"></div>
 <div style="position: absolute; left: 196.56px; top: 0.00px; width: 671.00px; height: 428.89px">
 <div style="position: absolute; left: 0.00px; top: 0.00px; width: 671.00px; height: 224.00px">
 <div class="ff" data-origsize="68.17" data-lhratio="1.0937" data-valign="CENTER" style="position: absolute; left: 0.00px; top: 0.00px; width: 498.00px; height: 224.00px; font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 500; font-size: 68.17px; line-height: 74.57px; letter-spacing: 0.00px; color: rgba(240,240,240,1.000); text-align: left; display: block; white-space: pre-wrap; text-transform: none">I can see tomatoes,<br/>spinach, cheese, and<br/>beef.</div>
@@ -85,7 +85,7 @@
 function fitToViewport() {
   var screen = document.querySelector('.screen');
   var w = 1320.00, h = 2868.00;
-  var scale = Math.min(window.innerWidth / w, window.innerHeight / h) * 0.98;
+  var scale = Math.min(window.innerWidth / w, window.innerHeight / h);
   screen.style.transform = 'scale(' + scale + ')';
   screen.style.transformOrigin = 'center center';
 }

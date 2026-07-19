@@ -19,9 +19,9 @@
 <div style="position: absolute; left: 1660.00px; top: 3310.00px; width: 1000.00px; height: 1000.00px; background-color: rgba(19,40,101,1.000); filter: blur(1000.0px); border-radius: 50%"></div>
 <div style="position: absolute; left: -500.00px; top: 430.00px; width: 1000.00px; height: 1000.00px; background-color: rgba(19,40,101,1.000); filter: blur(1000.0px); border-radius: 50%"></div>
 <div style="position: absolute; left: 62.00px; top: 450.48px; width: 1075.29px; height: 367.46px">
-<div style="position: absolute; left: 0.00px; top: 0.00px; width: 316.82px; height: 367.46px; background-image: url('assets/images/aa97ff1c27a9ea828991d7beae270715b290fd5d.png'); background-size: 131.00% 116.95%; background-position: 50.13% 50.71%; background-repeat: no-repeat; border-radius: 31.99688720703125px"></div>
-<div style="position: absolute; left: 385.12px; top: 0.00px; width: 307.98px; height: 367.46px; background-image: url('assets/images/2fcb53f6b8f414bd5162f695506f928ca96fcfcf.png'); background-size: 114.00% 101.77%; background-position: 38.43% -5.89%; background-repeat: no-repeat; border-radius: 31.99688720703125px"></div>
-<div style="position: absolute; left: 761.42px; top: 7.06px; width: 313.87px; height: 349.79px; background-image: url('assets/images/5d3beb8cc5d22e628c21af77a0efa00b2bfae39b.png'); background-size: 114.00% 101.77%; background-position: 38.43% -5.89%; background-repeat: no-repeat; border-radius: 31.99688720703125px"></div>
+<div style="position: absolute; left: 0.00px; top: 0.00px; width: 316.82px; height: 367.46px; background-image: url('../assets/images/aa97ff1c27a9ea828991d7beae270715b290fd5d.png'); background-size: 131.00% 116.95%; background-position: 50.13% 50.71%; background-repeat: no-repeat; border-radius: 31.99688720703125px"></div>
+<div style="position: absolute; left: 385.12px; top: 0.00px; width: 307.98px; height: 367.46px; background-image: url('../assets/images/2fcb53f6b8f414bd5162f695506f928ca96fcfcf.png'); background-size: 114.00% 101.77%; background-position: 38.43% -5.89%; background-repeat: no-repeat; border-radius: 31.99688720703125px"></div>
+<div style="position: absolute; left: 761.42px; top: 7.06px; width: 313.87px; height: 349.79px; background-image: url('../assets/images/5d3beb8cc5d22e628c21af77a0efa00b2bfae39b.png'); background-size: 114.00% 101.77%; background-position: 38.43% -5.89%; background-repeat: no-repeat; border-radius: 31.99688720703125px"></div>
 <div style="position: absolute; left: 823.19px; top: 6.79px; width: 84.58px; height: 84.58px">
 <div style="position: absolute; left: 0.00px; top: 0.00px; width: 84.58px; height: 84.58px; background-image: url('../assets/masked/302_21599.png'); background-size: contain; background-position: center; background-repeat: no-repeat"></div>
 </div>
@@ -112,7 +112,7 @@
 function fitToViewport() {
   var screen = document.querySelector('.screen');
   var w = 1200.00, h = 1920.00;
-  var scale = Math.min(window.innerWidth / w, window.innerHeight / h) * 0.98;
+  var scale = Math.min(window.innerWidth / w, window.innerHeight / h);
   screen.style.transform = 'scale(' + scale + ')';
   screen.style.transformOrigin = 'center center';
 }

@@ -26,9 +26,9 @@
 </div>
 </div>
 <div style="position: absolute; left: 0.00px; top: 640.10px; width: 1183.11px; height: 437.40px">
-<div style="position: absolute; left: 0.00px; top: 0.00px; width: 348.85px; height: 437.40px; background-image: url('assets/images/aa97ff1c27a9ea828991d7beae270715b290fd5d.png'); background-size: 131.00% 116.95%; background-position: 50.13% 50.71%; background-repeat: no-repeat; border-radius: 35.2053108215332px"></div>
-<div style="position: absolute; left: 423.53px; top: 0.00px; width: 339.25px; height: 437.40px; background-image: url('assets/images/2fcb53f6b8f414bd5162f695506f928ca96fcfcf.png'); background-size: 114.00% 101.77%; background-position: 38.43% -5.89%; background-repeat: no-repeat; border-radius: 35.2053108215332px"></div>
-<div style="position: absolute; left: 837.46px; top: 7.47px; width: 345.65px; height: 429.93px; background-image: url('assets/images/5d3beb8cc5d22e628c21af77a0efa00b2bfae39b.png'); background-size: 114.00% 101.77%; background-position: 38.43% -5.89%; background-repeat: no-repeat; border-radius: 35.2053108215332px"></div>
+<div style="position: absolute; left: 0.00px; top: 0.00px; width: 348.85px; height: 437.40px; background-image: url('../assets/images/aa97ff1c27a9ea828991d7beae270715b290fd5d.png'); background-size: 131.00% 116.95%; background-position: 50.13% 50.71%; background-repeat: no-repeat; border-radius: 35.2053108215332px"></div>
+<div style="position: absolute; left: 423.53px; top: 0.00px; width: 339.25px; height: 437.40px; background-image: url('../assets/images/2fcb53f6b8f414bd5162f695506f928ca96fcfcf.png'); background-size: 114.00% 101.77%; background-position: 38.43% -5.89%; background-repeat: no-repeat; border-radius: 35.2053108215332px"></div>
+<div style="position: absolute; left: 837.46px; top: 7.47px; width: 345.65px; height: 429.93px; background-image: url('../assets/images/5d3beb8cc5d22e628c21af77a0efa00b2bfae39b.png'); background-size: 114.00% 101.77%; background-position: 38.43% -5.89%; background-repeat: no-repeat; border-radius: 35.2053108215332px"></div>
 <div style="position: absolute; left: 905.74px; top: 7.47px; width: 93.06px; height: 93.06px">
 <div style="position: absolute; left: 0.00px; top: 0.00px; width: 93.06px; height: 93.06px; background-image: url('../assets/masked/302_19556.png'); background-size: contain; background-position: center; background-repeat: no-repeat"></div>
 </div>
@@ -104,7 +104,7 @@
 function fitToViewport() {
   var screen = document.querySelector('.screen');
   var w = 1320.00, h = 2868.00;
-  var scale = Math.min(window.innerWidth / w, window.innerHeight / h) * 0.98;
+  var scale = Math.min(window.innerWidth / w, window.innerHeight / h);
   screen.style.transform = 'scale(' + scale + ')';
   screen.style.transformOrigin = 'center center';
 }

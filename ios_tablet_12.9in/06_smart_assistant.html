@@ -20,7 +20,7 @@
 <div style="position: absolute; left: -500.00px; top: 430.00px; width: 1000.00px; height: 1000.00px; background-color: rgba(19,40,101,1.000); filter: blur(1000.0px); border-radius: 50%"></div>
 <div style="position: absolute; left: 46.00px; top: -812.00px; width: 1770.00px; height: 2049.12px">
 <div style="position: absolute; left: 105.00px; top: -173.00px; width: 1684.00px; height: 2104.00px; background-color: rgba(255,255,255,0.002); box-shadow: 0.0px 113.46154022216797px 226.92308044433594px -54.4615364074707px rgba(0,0,0,0.250); border-radius: 181.5384521484375px; border: 27.23px solid rgba(34,34,34,1.000); overflow: hidden">
-<div style="position: absolute; left: 27.23px; top: 12.00px; width: 1629.54px; height: 2080.00px; background-image: url('assets/images/3f4284a3742f081bb32b6bc1a60d115c0bf659a2.png'); background-size: cover; background-position: center; background-repeat: no-repeat; overflow: hidden"></div>
+<div style="position: absolute; left: 27.23px; top: 12.00px; width: 1629.54px; height: 2080.00px; background-image: url('../assets/images/3f4284a3742f081bb32b6bc1a60d115c0bf659a2.png'); background-size: cover; background-position: center; background-repeat: no-repeat; overflow: hidden"></div>
 <div style="position: absolute; left: 99.84px; top: 99.84px; width: 254.15px; height: 254.15px; background-color: rgba(0,200,150,1.000); border-radius: 72.6153793334961px">
 <div style="position: absolute; left: 0.00px; top: 0.00px; width: 254.15px; height: 254.15px; background-color: rgba(255,255,255,0.002); box-shadow: 0.0px 18.153844833374023px 27.23076820373535px -18.153844833374023px rgba(0,0,0,0.100), 0.0px 45.384613037109375px 68.07691955566406px -13.615384101867676px rgba(0,0,0,0.100); border-radius: 72.6153793334961px"></div>
 <div style="position: absolute; left: 54.46px; top: 54.46px; width: 145.23px; height: 145.23px; overflow: hidden">
@@ -53,7 +53,7 @@
 <div style="position: absolute; left: 0.00px; top: 1876.00px; width: 2048.00px; height: 855.58px">
 <div style="position: absolute; left: 112.00px; top: 0.00px; width: 1828.00px; height: 701.00px; background-color: rgba(255,255,255,0.080); backdrop-filter: blur(38.64615249633789px); border-radius: 40.0px 62.0px 40.0px 18.0px; border: 3.22px solid rgba(255,255,255,0.100)">
 <div style="position: absolute; left: 80.51px; top: 80.52px; width: 1589.68px; height: 531.53px">
-<div style="position: absolute; left: 0.00px; top: 0.00px; width: 201.00px; height: 201.00px; background-image: url('assets/images/b221b673ddff5f75bfcab24a721f684b4af78bdf.png'); background-size: cover; background-position: center; background-repeat: no-repeat; border-radius: 87.0px"></div>
+<div style="position: absolute; left: 0.00px; top: 0.00px; width: 201.00px; height: 201.00px; background-image: url('../assets/images/b221b673ddff5f75bfcab24a721f684b4af78bdf.png'); background-size: cover; background-position: center; background-repeat: no-repeat; border-radius: 87.0px"></div>
 <div style="position: absolute; left: 252.53px; top: 0.00px; width: 1453.00px; height: 531.53px">
 <div style="position: absolute; left: 0.00px; top: 0.00px; width: 1453.00px; height: 240.00px">
 <div class="ff" data-origsize="96.00" data-lhratio="1.2500" data-valign="CENTER" style="position: absolute; left: 0.00px; top: 0.00px; width: 1453.00px; height: 240.00px; font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 600; font-size: 96.00px; line-height: 120.00px; letter-spacing: 0.00px; color: rgba(240,240,240,1.000); text-align: left; display: block; white-space: pre-wrap; text-transform: none">I can see tomatoes, spinach, cheese, and<br/>beef.</div>
@@ -84,7 +84,7 @@
 function fitToViewport() {
   var screen = document.querySelector('.screen');
   var w = 2048.00, h = 2732.00;
-  var scale = Math.min(window.innerWidth / w, window.innerHeight / h) * 0.98;
+  var scale = Math.min(window.innerWidth / w, window.innerHeight / h);
   screen.style.transform = 'scale(' + scale + ')';
   screen.style.transformOrigin = 'center center';
 }

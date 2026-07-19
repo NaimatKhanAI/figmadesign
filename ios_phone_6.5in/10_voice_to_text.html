@@ -70,7 +70,7 @@
 <div style="position: absolute; left: 59.00px; top: 62.00px; width: 1077.00px; height: 196.00px">
 <div style="position: absolute; left: 0.00px; top: 0.00px; width: 918.00px; height: 196.00px; background-color: rgba(45,45,77,1.000); border-radius: 74.0px 74.0px 74.0px 0.0px">
 <div style="position: absolute; left: 0.00px; top: 0.00px; width: 918.01px; height: 196.19px; background-color: rgba(255,255,255,0.002); box-shadow: 0.0px 12.47291088104248px 18.709367752075195px -12.47291088104248px rgba(0,0,0,0.100), 0.0px 31.182279586791992px 46.77341842651367px -9.354683876037598px rgba(0,0,0,0.100); border-radius: 60.0px 60.0px 60.0px 0.0px"></div>
-<div style="position: absolute; left: 24.00px; top: 25.50px; width: 145.00px; height: 145.00px; background-image: url('assets/images/b221b673ddff5f75bfcab24a721f684b4af78bdf.png'); background-size: cover; background-position: center; background-repeat: no-repeat; border-radius: 82.46537780761719px"></div>
+<div style="position: absolute; left: 24.00px; top: 25.50px; width: 145.00px; height: 145.00px; background-image: url('../assets/images/b221b673ddff5f75bfcab24a721f684b4af78bdf.png'); background-size: cover; background-position: center; background-repeat: no-repeat; border-radius: 82.46537780761719px"></div>
 <div style="position: absolute; left: 169.00px; top: 54.00px; width: 637.42px; height: 88.00px">
 <div class="ff" data-origsize="48.00" data-lhratio="1.8190" data-valign="CENTER" style="position: absolute; left: 37.42px; top: 0.00px; width: 600.00px; height: 88.00px; font-family: 'Inter', sans-serif; font-weight: 400; font-size: 48.00px; line-height: 87.31px; letter-spacing: 0.00px; color: rgba(255,255,255,1.000); text-align: left; display: block; white-space: pre-wrap; text-transform: none">How can I help you?</div>
 </div>
@@ -384,7 +384,7 @@
 function fitToViewport() {
   var screen = document.querySelector('.screen');
   var w = 1242.00, h = 2688.00;
-  var scale = Math.min(window.innerWidth / w, window.innerHeight / h) * 0.98;
+  var scale = Math.min(window.innerWidth / w, window.innerHeight / h);
   screen.style.transform = 'scale(' + scale + ')';
   screen.style.transformOrigin = 'center center';
 }
