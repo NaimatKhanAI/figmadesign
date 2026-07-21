@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <title>ios_phone_6.9in - 06_smart_assistant</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Manrope:wght@100;200;300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@100;200;300;400;500;600;700;800;900&family=Outfit:wght@100;200;300;400;500;600;700;800;900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
   html, body { background: #0a0a0a; height: 100%; overflow: hidden; }
@@ -23,13 +23,17 @@
 <div style="position: absolute; left: 73.29px; top: 73.29px; width: 186.55px; height: 186.55px; background-color: rgba(0,200,150,1.000); border-radius: 53.30097198486328px">
 <div style="position: absolute; left: 0.00px; top: 0.00px; width: 186.55px; height: 186.55px; background-color: rgba(255,255,255,0.002); box-shadow: 0.0px 13.32524299621582px 19.987865447998047px -13.32524299621582px rgba(0,0,0,0.100), 0.0px 33.3131103515625px 49.96966552734375px -9.993932723999023px rgba(0,0,0,0.100); border-radius: 53.30097198486328px"></div>
 <div style="position: absolute; left: 39.98px; top: 39.98px; width: 106.60px; height: 106.60px; overflow: hidden">
+<img src="../assets/vectors/302_19359.png" alt="" style="position: absolute; left: 13.32px; top: 17.77px; width: 79.95px; height: 71.07px" />
+<img src="../assets/vectors/302_19360.png" alt="" style="position: absolute; left: 39.98px; top: 44.42px; width: 26.65px; height: 26.65px" />
 </div>
 </div>
 <div style="position: absolute; left: 99.94px; top: 1150.97px; width: 119.93px; height: 93.28px">
 <div style="position: absolute; left: 0.00px; top: 0.00px; width: 53.30px; height: 53.30px; overflow: hidden">
+<img src="../assets/vectors/302_19363.png" alt="" style="position: absolute; left: 0.00px; top: 0.00px; width: 53.30px; height: 53.30px" />
 </div>
 <div style="position: absolute; left: 53.30px; top: 0.00px; width: 66.63px; height: 93.28px">
 <div style="position: absolute; left: 26.65px; top: 53.30px; width: 39.98px; height: 39.98px; opacity: 0.700; overflow: hidden">
+<img src="../assets/vectors/302_19366.png" alt="" style="position: absolute; left: 0.00px; top: 0.00px; width: 39.98px; height: 39.98px" />
 </div>
 </div>
 </div>
@@ -85,7 +89,7 @@
 function fitToViewport() {
   var screen = document.querySelector('.screen');
   var w = 1320.00, h = 2868.00;
-  var scale = Math.min(window.innerWidth / w, window.innerHeight / h);
+  var scale = Math.min(window.innerWidth / w, window.innerHeight / h) * 0.98;
   screen.style.transform = 'scale(' + scale + ')';
   screen.style.transformOrigin = 'center center';
 }

@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <title>android_phone - 02_hero_feature_icons</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Manrope:wght@100;200;300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@100;200;300;400;500;600;700;800;900&family=Outfit:wght@100;200;300;400;500;600;700;800;900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
   html, body { background: #0a0a0a; height: 100%; overflow: hidden; }
@@ -95,14 +95,19 @@
 </div>
 <div style="position: absolute; left: 132.53px; top: 129.85px; width: 241.63px; height: 38.33px">
 <div style="position: absolute; left: 0.00px; top: 0.00px; width: 38.33px; height: 38.33px; overflow: hidden">
+<img src="../assets/vectors/302_21313.png" alt="" style="position: absolute; left: 4.54px; top: 5.03px; width: 29.24px; height: 27.90px" />
 </div>
 <div style="position: absolute; left: 50.83px; top: 0.00px; width: 38.33px; height: 38.33px; overflow: hidden">
+<img src="../assets/vectors/302_21315.png" alt="" style="position: absolute; left: 4.54px; top: 5.03px; width: 29.24px; height: 27.90px" />
 </div>
 <div style="position: absolute; left: 101.65px; top: 0.00px; width: 38.33px; height: 38.33px; overflow: hidden">
+<img src="../assets/vectors/302_21317.png" alt="" style="position: absolute; left: 4.54px; top: 5.03px; width: 29.24px; height: 27.90px" />
 </div>
 <div style="position: absolute; left: 152.48px; top: 0.00px; width: 38.33px; height: 38.33px; overflow: hidden">
+<img src="../assets/vectors/302_21319.png" alt="" style="position: absolute; left: 4.54px; top: 5.03px; width: 29.24px; height: 27.90px" />
 </div>
 <div style="position: absolute; left: 203.31px; top: 0.00px; width: 38.33px; height: 38.33px; overflow: hidden">
+<img src="../assets/vectors/302_21321.png" alt="" style="position: absolute; left: 4.54px; top: 5.03px; width: 29.24px; height: 27.90px" />
 </div>
 </div>
 </div>
@@ -112,7 +117,7 @@
 function fitToViewport() {
   var screen = document.querySelector('.screen');
   var w = 1080.00, h = 1920.00;
-  var scale = Math.min(window.innerWidth / w, window.innerHeight / h);
+  var scale = Math.min(window.innerWidth / w, window.innerHeight / h) * 0.98;
   screen.style.transform = 'scale(' + scale + ')';
   screen.style.transformOrigin = 'center center';
 }
