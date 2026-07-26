@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
 <meta charset="utf-8" />
-<title>ios_tablet_12.9in - 01_hero_infinite_possibilities</title>
+<title>ios_tablet_12.9in - 01_hero_Endless_possibilities</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@100;200;300;400;500;600;700;800;900&family=Outfit:wght@100;200;300;400;500;600;700;800;900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
-  html, body { background: #0a0a0a; height: 100%; overflow: hidden; }
+  html, body { background: #010205; height: 100%; overflow: hidden; }
   .viewport { width: 100vw; height: 100vh; display: flex; align-items: center; justify-content: center; overflow: hidden; }
   .screen { position: relative; flex-shrink: 0; }
 </style>
@@ -20,7 +20,7 @@
 <div style="position: absolute; left: -500.00px; top: 430.00px; width: 1000.00px; height: 1000.00px; background-color: rgba(19,40,101,1.000); filter: blur(1000.0px); border-radius: 50%"></div>
 <div style="position: absolute; left: 147.00px; top: 73.00px; width: 1754.00px; height: 1987.71px">
 <div style="position: absolute; left: 0.00px; top: 0.00px; width: 1754.00px; height: 754.08px">
-<div class="ff" data-origsize="187.22" data-lhratio="1.2444" data-valign="CENTER" style="position: absolute; left: 0.00px; top: 0.00px; width: 1754.00px; height: 754.08px; font-family: 'Outfit', sans-serif; font-weight: 700; font-size: 187.22px; line-height: 232.98px; letter-spacing: 1.04px; color: rgba(255,255,255,1.000); text-align: center; display: block; white-space: pre-wrap; text-transform: none">AI Chatbot,<br/>Infinite<br/>Possibilities</div>
+<div class="ff" data-origsize="187.22" data-lhratio="1.2444" data-valign="CENTER" style="position: absolute; left: 0.00px; top: 0.00px; width: 1754.00px; height: 754.08px; font-family: 'Outfit', sans-serif; font-weight: 700; font-size: 187.22px; line-height: 232.98px; letter-spacing: 1.04px; color: rgba(255,255,255,1.000); text-align: center; display: block; white-space: pre-wrap; text-transform: none">AI Chatbot,<br/>Endless<br/>Possibilities</div>
 </div>
 <div style="position: absolute; left: 0.00px; top: 826.89px; width: 1754.00px; height: 908.01px">
 <div style="position: absolute; left: 0.00px; top: 0.00px; width: 1754.00px; height: 908.01px; background-color: rgba(26,26,74,0.200); border-radius: 62.40641784667969px; border: 7.28px solid rgba(19,40,101,1.000)">
@@ -176,7 +176,7 @@
 function fitToViewport() {
   var screen = document.querySelector('.screen');
   var w = 2048.00, h = 2732.00;
-  var scale = Math.min(window.innerWidth / w, window.innerHeight / h) * 0.98;
+  var scale = Math.min(window.innerWidth / w, window.innerHeight / h);
   screen.style.transform = 'scale(' + scale + ')';
   screen.style.transformOrigin = 'center center';
 }
@@ -187,16 +187,9 @@ function autoFitText() {
     var boxW = el.clientWidth, boxH = el.clientHeight;
     var origSize = parseFloat(el.dataset.origsize);
     var lhRatio = parseFloat(el.dataset.lhratio);
-    var minSize = origSize * 0.45;
     el.style.paddingTop = '0px';
-    var cur = origSize;
-    var guard = 0;
-    while ((el.scrollWidth > boxW + 1 || el.scrollHeight > boxH + 1) && cur > minSize && guard < 200) {
-      cur -= 1;
-      el.style.fontSize = cur + 'px';
-      el.style.lineHeight = (cur * lhRatio) + 'px';
-      guard++;
-    }
+    el.style.fontSize = origSize + 'px';
+    el.style.lineHeight = (origSize * lhRatio) + 'px';
     var extra = boxH - el.scrollHeight;
     if (extra > 0) {
       var valign = el.dataset.valign;

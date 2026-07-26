@@ -6,7 +6,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@100;200;300;400;500;600;700;800;900&family=Outfit:wght@100;200;300;400;500;600;700;800;900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
-  html, body { background: #0a0a0a; height: 100%; overflow: hidden; }
+  html, body { background: #010205; height: 100%; overflow: hidden; }
   .viewport { width: 100vw; height: 100vh; display: flex; align-items: center; justify-content: center; overflow: hidden; }
   .screen { position: relative; flex-shrink: 0; }
 </style>
@@ -18,9 +18,9 @@
 <div style="position: absolute; left: -500.00px; top: -500.00px; width: 1000.00px; height: 1000.00px; background-color: rgba(19,40,101,1.000); filter: blur(1000.0px); border-radius: 50%"></div>
 <div style="position: absolute; left: 742.00px; top: 2188.00px; width: 1000.00px; height: 1000.00px; background-color: rgba(19,40,101,1.000); filter: blur(1000.0px); border-radius: 50%"></div>
 <div style="position: absolute; left: 50.00px; top: 180.00px; width: 1141.00px; height: 3122.00px">
-<div style="position: absolute; left: -16.00px; top: -33.00px; width: 1122.00px; height: 420.00px">
+<div style="position: absolute; left: -16.00px; top: 0.00px; width: 1122.00px; height: 420.00px">
 <div style="position: absolute; left: 0.00px; top: 0.00px; width: 1122.00px; height: 420.00px">
-<div class="ff" data-origsize="180.00" data-lhratio="1.2444" data-valign="CENTER" style="position: absolute; left: 0.00px; top: 0.00px; width: 1122.00px; height: 420.00px; font-family: 'Outfit', sans-serif; font-weight: 700; font-size: 180.00px; line-height: 224.00px; letter-spacing: 1.00px; color: rgba(255,255,255,1.000); text-align: center; display: block; white-space: pre-wrap; text-transform: none">Work on
+<div class="ff" data-origsize="180.00" data-lhratio="1.2444" data-valign="CENTER" style="position: absolute; left: 0.00px; top: 0.00px; width: 1122.00px; height: 420.00px; font-family: 'Outfit', sans-serif; font-weight: 700; font-size: 154.00px; line-height: 192.00px; letter-spacing: 1.00px; color: rgba(255,255,255,1.000); text-align: center; display: block; white-space: pre-wrap; text-transform: none">Work on
 Any Format</div>
 </div>
 </div>
@@ -116,7 +116,7 @@ Any Format</div>
 function fitToViewport() {
   var screen = document.querySelector('.screen');
   var w = 1242.00, h = 2688.00;
-  var scale = Math.min(window.innerWidth / w, window.innerHeight / h) * 0.98;
+  var scale = Math.min(window.innerWidth / w, window.innerHeight / h);
   screen.style.transform = 'scale(' + scale + ')';
   screen.style.transformOrigin = 'center center';
 }
@@ -127,16 +127,9 @@ function autoFitText() {
     var boxW = el.clientWidth, boxH = el.clientHeight;
     var origSize = parseFloat(el.dataset.origsize);
     var lhRatio = parseFloat(el.dataset.lhratio);
-    var minSize = origSize * 0.45;
     el.style.paddingTop = '0px';
-    var cur = origSize;
-    var guard = 0;
-    while ((el.scrollWidth > boxW + 1 || el.scrollHeight > boxH + 1) && cur > minSize && guard < 200) {
-      cur -= 1;
-      el.style.fontSize = cur + 'px';
-      el.style.lineHeight = (cur * lhRatio) + 'px';
-      guard++;
-    }
+    el.style.fontSize = origSize + 'px';
+    el.style.lineHeight = (origSize * lhRatio) + 'px';
     var extra = boxH - el.scrollHeight;
     if (extra > 0) {
       var valign = el.dataset.valign;

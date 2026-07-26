@@ -6,7 +6,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@100;200;300;400;500;600;700;800;900&family=Outfit:wght@100;200;300;400;500;600;700;800;900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
-  html, body { background: #0a0a0a; height: 100%; overflow: hidden; }
+  html, body { background: #010205; height: 100%; overflow: hidden; }
   .viewport { width: 100vw; height: 100vh; display: flex; align-items: center; justify-content: center; overflow: hidden; }
   .screen { position: relative; flex-shrink: 0; }
 </style>
@@ -61,10 +61,10 @@
 <div style="position: absolute; left: 0.00px; top: 0.00px; width: 133.00px; height: 133.00px; background-image: url('../assets/images/b221b673ddff5f75bfcab24a721f684b4af78bdf.png'); background-size: cover; background-position: center; background-repeat: no-repeat; border-radius: 87.0px"></div>
 <div style="position: absolute; left: 184.53px; top: 0.00px; width: 630.00px; height: 401.53px">
 <div style="position: absolute; left: 0.00px; top: 0.00px; width: 630.00px; height: 210.00px">
-<div class="ff" data-origsize="64.00" data-lhratio="1.0938" data-valign="CENTER" style="position: absolute; left: 0.00px; top: 0.00px; width: 467.00px; height: 210.00px; font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 500; font-size: 64.00px; line-height: 70.00px; letter-spacing: 0.00px; color: rgba(240,240,240,1.000); text-align: left; display: block; white-space: pre-wrap; text-transform: none">I can see tomatoes,<br/>spinach, cheese, and<br/>beef.</div>
+<div class="ff" data-origsize="64.00" data-lhratio="1.0938" data-valign="CENTER" style="position: absolute; left: 0.00px; top: 0.00px; width: 467.00px; height: 210.00px; font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 500; font-size: 64.00px; line-height: 70.00px; letter-spacing: 0.00px; color: rgba(240,240,240,1.000); text-align: left; display: block; white-space: pre-wrap; text-transform: none">I see tomatoes,<br/>spinach, cheese, and<br/>beef.</div>
 </div>
 <div style="position: absolute; left: 0.00px; top: 261.53px; width: 630.00px; height: 140.00px">
-<div class="ff" data-origsize="64.00" data-lhratio="1.0938" data-valign="CENTER" style="position: absolute; left: 0.00px; top: 0.00px; width: 630.00px; height: 140.00px; font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 500; font-size: 64.00px; line-height: 70.00px; letter-spacing: 0.00px; color: rgba(240,240,240,1.000); text-align: left; display: block; white-space: pre-wrap; text-transform: none">How about beef and veggie<br/>quesadillas tonight?</div>
+<div class="ff" data-origsize="64.00" data-lhratio="1.0938" data-valign="CENTER" style="position: absolute; left: 0.00px; top: 0.00px; width: 630.00px; height: 140.00px; font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 500; font-size: 64.00px; line-height: 70.00px; letter-spacing: 0.00px; color: rgba(240,240,240,1.000); text-align: left; display: block; white-space: pre-wrap; text-transform: none">How about a beef and<br/>veggie quesadilla<br/>tonight?</div>
 </div>
 </div>
 </div>
@@ -89,7 +89,7 @@
 function fitToViewport() {
   var screen = document.querySelector('.screen');
   var w = 1242.00, h = 2688.00;
-  var scale = Math.min(window.innerWidth / w, window.innerHeight / h) * 0.98;
+  var scale = Math.min(window.innerWidth / w, window.innerHeight / h);
   screen.style.transform = 'scale(' + scale + ')';
   screen.style.transformOrigin = 'center center';
 }

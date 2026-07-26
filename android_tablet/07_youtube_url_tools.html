@@ -2,11 +2,12 @@
 <html lang="en">
 <head>
 <meta charset="utf-8" />
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
 <title>android_tablet - 07_youtube_url_tools</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&family=Liberation+Sans:wght@100;200;300;400;500;600;700;800;900&family=Manrope:wght@100;200;300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@100;200;300;400;500;600;700;800;900&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
-  html, body { background: #0a0a0a; height: 100%; overflow: hidden; }
+  html, body { background: #010205; height: 100%; overflow: hidden; }
   .viewport { width: 100vw; height: 100vh; display: flex; align-items: center; justify-content: center; overflow: hidden; }
   .screen { position: relative; flex-shrink: 0; }
 </style>
@@ -105,7 +106,7 @@
 <div class="ff" data-origsize="37.82" data-lhratio="1.4063" data-valign="CENTER" style="position: absolute; left: 0.00px; top: 0.00px; width: 805.67px; height: 213.00px; font-family: 'Inter', sans-serif; font-weight: 400; font-size: 37.82px; line-height: 53.19px; letter-spacing: 0.00px; color: rgba(209,213,219,1.000); text-align: left; display: block; white-space: pre-wrap; text-transform: none">This video review delves into 10 ways for generating income online, showcasing the dynamic landscape of online opportunities. Here&#x27;s an overview of the potential<br/>avenues discussed:</div>
 </div>
 <div style="position: absolute; left: 106.90px; top: 342.60px; width: 805.67px; height: 396.45px">
-<div class="ff" data-origsize="60.13" data-lhratio="1.6250" data-valign="CENTER" style="position: absolute; left: 0.00px; top: 53.45px; width: 805.67px; height: 343.00px; font-family: 'Inter', sans-serif; font-weight: 700; font-size: 60.13px; line-height: 97.71px; letter-spacing: 0.00px; color: rgba(255,255,255,1.000); text-align: left; display: block; white-space: pre-wrap; text-transform: none"> फ्रीलांसिंग: Upwork, Freelancer और Fiverr जैसे प्लेटफ़ॉर्म्स का उपयोग करें, जो फ्रीलांसरों को उन क्लाइंट्स से जोड़ते हैं जिन्हें लेखन, ग्राफिक डिज़ाइन, प्रोग्रामिंग, मार्केटिंग आदि सेवाओं की आवश्यकता होती है।</div>
+<div class="ff" data-origsize="42.00" data-lhratio="1.3800" data-valign="CENTER" style="position: absolute; left: 0.00px; top: 40.00px; width: 805.67px; height: 330.00px; font-family: 'Inter', sans-serif; font-weight: 700; font-size: 42.00px; line-height: 58.00px; letter-spacing: 0.00px; color: rgba(255,255,255,1.000); text-align: left; display: block; white-space: pre-wrap; text-transform: none">1. Freelancing: Use platforms like Upwork, Freelancer, and Fiverr to find clients for writing, graphic design, programming, marketing, and more.</div>
 </div>
 </div>
 </div>
@@ -121,8 +122,8 @@
 </div>
 </div>
 </div>
-<div style="position: absolute; left: -16.00px; top: 101.00px; width: 1232.68px; height: 328.90px">
-<div class="ff" data-origsize="131.57" data-lhratio="1.2444" data-valign="CENTER" style="position: absolute; left: 0.00px; top: 0.00px; width: 1232.68px; height: 328.90px; font-family: 'Outfit', sans-serif; font-weight: 700; font-size: 131.57px; line-height: 163.74px; letter-spacing: 0.73px; color: rgba(255,255,255,1.000); text-align: center; display: block; white-space: pre-wrap; text-transform: none">YouTube<br/>and URL Tools</div>
+<div style="position: absolute; left: -16.00px; top: 70.00px; width: 1232.68px; height: 300.00px">
+<div class="ff" data-origsize="131.57" data-lhratio="1.2444" data-valign="CENTER" style="position: absolute; left: 0.00px; top: 0.00px; width: 1232.68px; height: 328.90px; font-family: 'Outfit', sans-serif; font-weight: 700; font-size: 112.00px; line-height: 122.00px; letter-spacing: 0.73px; color: rgba(255,255,255,1.000); text-align: center; display: block; white-space: pre-wrap; text-transform: none">YouTube<br/>and URL Tools</div>
 </div>
 </div>
 </div>
@@ -130,7 +131,7 @@
 function fitToViewport() {
   var screen = document.querySelector('.screen');
   var w = 1200.00, h = 1920.00;
-  var scale = Math.min(window.innerWidth / w, window.innerHeight / h) * 0.98;
+  var scale = Math.min(window.innerWidth / w, window.innerHeight / h);
   screen.style.transform = 'scale(' + scale + ')';
   screen.style.transformOrigin = 'center center';
 }
@@ -139,18 +140,12 @@ fitToViewport();
 function autoFitText() {
   document.querySelectorAll('.ff').forEach(function(el) {
     var boxW = el.clientWidth, boxH = el.clientHeight;
-    var origSize = parseFloat(el.dataset.origsize);
-    var lhRatio = parseFloat(el.dataset.lhratio);
-    var minSize = origSize * 0.45;
+    var origSize = parseFloat(el.style.fontSize) || parseFloat(el.dataset.origsize);
+    var inlineLineHeight = parseFloat(el.style.lineHeight);
+    var lhRatio = inlineLineHeight ? inlineLineHeight / origSize : parseFloat(el.dataset.lhratio);
     el.style.paddingTop = '0px';
-    var cur = origSize;
-    var guard = 0;
-    while ((el.scrollWidth > boxW + 1 || el.scrollHeight > boxH + 1) && cur > minSize && guard < 200) {
-      cur -= 1;
-      el.style.fontSize = cur + 'px';
-      el.style.lineHeight = (cur * lhRatio) + 'px';
-      guard++;
-    }
+    el.style.fontSize = origSize + 'px';
+    el.style.lineHeight = (origSize * lhRatio) + 'px';
     var extra = boxH - el.scrollHeight;
     if (extra > 0) {
       var valign = el.dataset.valign;
