@@ -4,7 +4,7 @@
 <meta charset="utf-8" />
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Omni AI Screens</title>
+<title>Android Phone Pixel Screens</title>
 <style>
   * { box-sizing: border-box; }
   html { background: #090b10; color: #f5f7fb; font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
@@ -119,7 +119,7 @@
 </head>
 <body>
 <header>
-  <h1>Omni AI Screens</h1>
+  <h1>Android Phone Pixel Screens</h1>
   <div class="controls" id="controls"></div>
 </header>
 <main>
@@ -127,7 +127,7 @@
 </main>
 <script>
 const screens = [
-  { device: "android_phone", size: "1080x1920", w: 1080, h: 1920, files: ["01_hero_infinite_possibilities.html","02_hero_feature_icons.html","03_ask_ai_anything.html","04_best_ai_tools.html","05_snap_and_solve.html","06_smart_assistant.html","07_youtube_url_tools.html","08_pocket_ai_assistant.html","09_any_format.html","10_voice_to_text.html","11_ai_image_video.html","12_generate_image_video.html"] },
+  { device: "android_phone_pixel_20260726051500", size: "1080x1920", w: 1080, h: 1920, files: ["01_hero_infinite_possibilities.html","02_hero_feature_icons.html","03_ask_ai_anything.html","04_best_ai_tools.html","05_snap_and_solve.html","06_smart_assistant.html","07_youtube_url_tools.html","08_pocket_ai_assistant.html","09_any_format.html","10_voice_to_text.html","11_ai_image_video.html","12_generate_image_video.html"] },
   { device: "android_tablet", size: "1200x1920", w: 1200, h: 1920, files: ["01_hero_infinite_possibilities.html","02_hero_feature_icons.html","03_ask_ai_anything.html","04_best_ai_tools.html","05_snap_and_solve.html","07_youtube_url_tools.html","08_pocket_ai_assistant.html","09_any_format.html"] },
   { device: "ios_phone_6.5in", size: "1242x2688", w: 1242, h: 2688, files: ["01_hero_infinite_possibilities.html","02_hero_feature_icons.html","03_ask_ai_anything.html","04_best_ai_tools.html","05_snap_and_solve.html","06_smart_assistant.html","07_youtube_url_tools.html","08_pocket_ai_assistant.html","09_any_format.html","10_voice_to_text.html","11_ai_image_video.html","12_generate_image_video.html"] },
   { device: "ios_phone_6.9in", size: "1320x2868", w: 1320, h: 2868, files: ["01_hero_infinite_possibilities.html","02_hero_feature_icons.html","03_ask_ai_anything.html","04_generate_image_video.html","05_snap_and_solve.html","06_smart_assistant.html","10_voice_to_text.html","11_ai_image_video.html"] },
@@ -137,7 +137,7 @@ const screens = [
 const allDevices = ["all"].concat(screens.map((group) => group.device));
 const controls = document.getElementById("controls");
 const grid = document.getElementById("grid");
-let activeDevice = "android_phone";
+let activeDevice = "android_phone_pixel_20260726051500";
 
 function niceName(file) {
   return file.replace(".html", "").replace(/_/g, " ");
