@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Omni AI iOS Tablet 12.9 Pixel Screens</title>
+<style>
+  * { box-sizing: border-box; }
+  html { background: #090b10; color: #f5f7fb; font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+  body { margin: 0; min-height: 100vh; background: #090b10; }
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    padding: 18px 22px;
+    background: rgba(9, 11, 16, 0.92);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(16px);
+  }
+  h1 {
+    margin: 0;
+    font-size: 20px;
+    line-height: 1.2;
+    font-weight: 750;
+    letter-spacing: 0;
+  }
+  .controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  button {
+    height: 36px;
+    padding: 0 13px;
+    color: #f5f7fb;
+    background: #171b24;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 8px;
+    font: inherit;
+    font-size: 13px;
+    cursor: pointer;
+  }
+  button.active {
+    color: #06111f;
+    background: #c8f1ff;
+    border-color: #c8f1ff;
+  }
+  main {
+    width: min(100%, 1900px);
+    margin: 0 auto;
+    padding: 22px;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+    gap: 18px;
+    align-items: start;
+  }
+  .card {
+    overflow: hidden;
+    background: #121620;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+  }
+  .preview {
+    position: relative;
+    width: 100%;
+    aspect-ratio: var(--ratio);
+    overflow: hidden;
+    background: #010205;
+  }
+  iframe {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: var(--frame-w);
+    height: var(--frame-h);
+    border: 0;
+    background: #010205;
+    transform-origin: top left;
+    transform: scale(var(--frame-scale, 1));
+  }
+  .meta {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 10px;
+    align-items: center;
+    padding: 12px;
+  }
+  .name {
+    min-width: 0;
+    font-size: 13px;
+    line-height: 1.35;
+  }
+  .device {
+    color: #9ea7b8;
+    font-size: 12px;
+    line-height: 1.35;
+  }
+  a {
+    color: #c8f1ff;
+    font-size: 12px;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+  a:hover { text-decoration: underline; }
+  @media (max-width: 640px) {
+    header { padding: 14px; }
+    main { padding: 14px; }
+    .grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1>Omni AI iOS Tablet 12.9 Pixel Screens</h1>
+  <div class="controls" id="controls"></div>
+</header>
+<main>
+  <div class="grid" id="grid"></div>
+</main>
+<script>
+const screens = [
+  { device: "android_phone", size: "1080x1920", w: 1080, h: 1920, files: ["01_hero_infinite_possibilities.html","02_hero_feature_icons.html","03_ask_ai_anything.html","04_best_ai_tools.html","05_snap_and_solve.html","06_smart_assistant.html","07_youtube_url_tools.html","08_pocket_ai_assistant.html","09_any_format.html","10_voice_to_text.html","11_ai_image_video.html","12_generate_image_video.html"] },
+  { device: "android_tablet", size: "1200x1920", w: 1200, h: 1920, files: ["01_hero_infinite_possibilities.html","02_hero_feature_icons.html","03_ask_ai_anything.html","04_best_ai_tools.html","05_snap_and_solve.html","07_youtube_url_tools.html","08_pocket_ai_assistant.html","09_any_format.html"] },
+  { device: "ios_phone_6.5in", size: "1242x2688", w: 1242, h: 2688, files: ["01_hero_infinite_possibilities.html","02_hero_feature_icons.html","03_ask_ai_anything.html","04_best_ai_tools.html","05_snap_and_solve.html","06_smart_assistant.html","07_youtube_url_tools.html","08_pocket_ai_assistant.html","09_any_format.html","10_voice_to_text.html","11_ai_image_video.html","12_generate_image_video.html"] },
+  { device: "ios_phone_6.9in", size: "1320x2868", w: 1320, h: 2868, files: ["01_hero_infinite_possibilities.html","02_hero_feature_icons.html","03_ask_ai_anything.html","04_generate_image_video.html","05_snap_and_solve.html","06_smart_assistant.html","10_voice_to_text.html","11_ai_image_video.html"] },
+  { device: "ios_tablet_12_9_pixel_20260726052043", size: "2048x2732", w: 2048, h: 2732, files: ["01_hero_infinite_possibilities.html","02_hero_feature_icons.html","03_ask_ai_anything.html","04_best_ai_tools.html","05_snap_and_solve.html","06_smart_assistant.html","07_youtube_url_tools.html","08_pocket_ai_assistant.html","09_any_format.html","10_voice_to_text.html","11_ai_image_video.html","12_generate_image_video.html"] }
+];
+
+const allDevices = ["all"].concat(screens.map((group) => group.device));
+const controls = document.getElementById("controls");
+const grid = document.getElementById("grid");
+let activeDevice = "ios_tablet_12_9_pixel_20260726052043";
+
+function niceName(file) {
+  return file.replace(".html", "").replace(/_/g, " ");
+}
+
+function renderControls() {
+  controls.innerHTML = "";
+  allDevices.forEach((device) => {
+    const button = document.createElement("button");
+    button.type = "button";
+    button.textContent = device === "all" ? "All" : device.replace(/_/g, " ");
+    button.className = activeDevice === device ? "active" : "";
+    button.addEventListener("click", () => {
+      activeDevice = device;
+      renderControls();
+      renderGrid();
+    });
+    controls.appendChild(button);
+  });
+}
+
+function renderGrid() {
+  grid.innerHTML = "";
+  screens
+    .filter((group) => activeDevice === "all" || activeDevice === group.device)
+    .forEach((group) => {
+      group.files.forEach((file) => {
+        const path = `${group.device}/${file}`;
+        const card = document.createElement("article");
+        card.className = "card";
+        card.style.setProperty("--ratio", `${group.w} / ${group.h}`);
+        card.style.setProperty("--frame-w", `${group.w}px`);
+        card.style.setProperty("--frame-h", `${group.h}px`);
+        card.innerHTML = `
+          <div class="preview">
+            <iframe src="${path}" title="${group.device} ${niceName(file)}" loading="lazy"></iframe>
+          </div>
+          <div class="meta">
+            <div class="name">
+              <div>${niceName(file)}</div>
+              <div class="device">${group.device.replace(/_/g, " ")} - ${group.size}</div>
+            </div>
+            <a href="${path}" target="_blank" rel="noreferrer">Open</a>
+          </div>
+        `;
+        grid.appendChild(card);
+        const preview = card.querySelector(".preview");
+        const resize = () => card.style.setProperty("--frame-scale", preview.clientWidth / group.w);
+        resize();
+        new ResizeObserver(resize).observe(preview);
+      });
+    });
+}
+
+renderControls();
+renderGrid();
+</script>
+</body>
+</html>
